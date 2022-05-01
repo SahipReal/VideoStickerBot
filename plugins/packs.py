@@ -14,12 +14,12 @@ async def packs_func(_, msg: Message):
         user_id = msg.from_user.id
         packs = (await database.get('users', msg.from_user.id)).get("packs")
         if not packs:
-            await msg.reply('You have no packs yet. Create one by sending a Video or GIF', quote=True)
+            await msg.reply('Henüz paketiniz yok. Video veya GIF göndererek bir tane oluşturun', quote=True)
             return
         if packs == 1:
-            string = '**Your Pack** \n\n'
+            string = '**Paketiniz** \n\n'
         else:
-            string = '**Your Packs** \n\n'
+            string = '**Paketiniz** \n\n'
         number = 0
         for n in range(1, packs+1):
             number += 1
