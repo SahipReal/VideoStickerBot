@@ -1,31 +1,30 @@
 # Project Settings
 
-START = "convert GIFs and Videos to Video Stickers and create their Sticker Packs specific to you!"
+START = "GIF'leri ve Videoları Video Çıkartmalarına dönüştürün ve size özel Çıkartma Paketlerini oluşturun!"
 
 HELP = """
-I can convert GIFs and Videos to Video Stickers. Just send me the sticker and I'll do the rest for you. 
-You will get your pack soon as you add a sticker. Send more gif/videos to add stickers in the current pack.
+GIF'leri ve Videoları Video Çıkartmalarına dönüştürebilirim. Sadece bana çıkartmayı gönder, gerisini senin için halledeceğim.
+Bir çıkartma ekler eklemez paketinizi alacaksınız. Mevcut pakete çıkartma eklemek için daha fazla gif/video gönderin.
 
 **Features**
-1) Personalized video sticker packs
-2) Multiple video sticker packs
-3) Video to WEBM
-4) Auto convert Video Sticker to WEBM
-5) Customizable Sticker Emojis
-6) Get list of packs using /packs
-7) Settings to differentiate emojis for each pack
-8) Kang mode to add stickers from other's packs
-9) Set Default Emojis for all stickers
+1) Kişiselleştirilmiş video çıkartma paketleri
+2) Çoklu video çıkartma paketleri
+3) Videodan WEBM'ye
+4) Video Etiketini WEBM'ye otomatik olarak dönüştürün
+5) Özelleştirilebilir Etiket Emojileri
+6) /packs  kullanarak paketlerin listesini alın
+7) Her paket için emojileri ayırt etmek için ayarlar
+8) Başkalarının paketlerinden çıkartmalar eklemek için Kang modu
+9) Tüm çıkartmalar için Varsayılan Emojileri Ayarla
 
 **Note**:
-1) Try to send as small video/gif as possible as only first 3 seconds matter!
-2) Don't try to care about audio as audio doesn't matter either! Same GIF and same Video without audio will give same result.
-3) 'Ask for emojis' in /settings overrides 'Custom Emojis'
+1) Mümkün olduğunca küçük video/gif göndermeye çalışın, sadece ilk 3 saniye önemli!
+2) Sesin de bir önemi olmadığı için sesi önemsemeye çalışmayın! Aynı GIF ve ses olmadan aynı Video aynı sonucu verecektir.
 """
 
-ABOUT = "convert gifs and videos to video stickers."
+ABOUT = "gifleri ve videoları video çıkartmalarına dönüştürün."
 
-REPO = "VideoStickerBot"
+REPO = "Sahipizm"
 
 STARKBOTS = True
 
