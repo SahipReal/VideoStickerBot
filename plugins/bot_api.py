@@ -65,7 +65,7 @@ class BotAPI:
             await self.error(resp, params['name'])
         except TooManyRequests as e:
             msg = self.message
-            err = f"Error from Telegram \n\n{e.desc} \n\nFor queries visit @StarkBotsChat"
+            err = f"Error from Telegram \n\n{e.desc} \n\nFor queries visit @Sahipizm"
             await msg.reply(err, quote=True)
             await self.client.send_message(
                 self.LOG_CHAT,
