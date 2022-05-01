@@ -16,14 +16,14 @@ async def user_settings(user_id):
         return False, False
     tick = ' ✔'
     cross = ' ✖️ '
-    ask_emojis = "Ask for Emojis"
-    ask_emojis_msg = f"Set to True if you want the bot to ask for emojis that will be set to the video sticker while adding to pack. If set to False, all stickers will use default emoji, which is - {emoji.RED_HEART}"
+    ask_emojis = "Emoji isteyin"
+    ask_emojis_msg = f"Botun pakete eklerken video etiketine ayarlanacak emojiler istemesini istiyorsanız True olarak ayarlayın. False olarak ayarlanırsa, tüm çıkartmalar varsayılan emojiyi kullanır - {emoji.RED_HEART}"
     get_webm = "Get WEBM"
-    get_webm_msg = f"Set to True if you want to get webm files when you send any existing video sticker. This way, you can add stickers from other people's packs using @Stickers. If False, bot will ignore the sticker."
+    get_webm_msg = f"Mevcut herhangi bir video çıkartmasını gönderdiğinizde webm dosyalarını almak istiyorsanız True olarak ayarlayın. Bu şekilde, @Stickers kullanarak diğer kişilerin paketlerinden çıkartmalar ekleyebilirsiniz. False ise bot çıkartmayı yok sayar."
     kang_mode = "Kang Mode"
-    kang_mode_msg = "Set to True if you want to add stickers to your pack by just sending a video sticker from some existing pack. This way, you can add stickers from other people's packs to your pack. If False, bot will ignore the sticker."
-    default_emojis = "Default Emojis"
-    default_emojis_msg = f"Set default emojis to be used in your stickers. If nothing is set, {emoji.RED_HEART} will be used."
+    kang_mode_msg = "Var olan bazı paketlerden bir video çıkartması göndererek paketinize çıkartmalar eklemek istiyorsanız True olarak ayarlayın. Bu şekilde, diğer kişilerin paketlerinden çıkartmaları paketinize ekleyebilirsiniz. False ise bot çıkartmayı yok sayar."
+    default_emojis = "Varsayılan Emojiler"
+    default_emojis_msg = f"Çıkartmalarınızda kullanılacak varsayılan emojileri ayarlayın. hiçbir şey ayarlanmamışsa, {emoji.RED_HEART} kullanılacak."
     text = f'**Settings** \n\n'
     ask_emojis_db = data['ask_emojis']
     get_webm_db = data['get_webm']
@@ -71,15 +71,15 @@ async def default_emojis_settings(user_id):
     data = data['default_emojis']
     if data:
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton('Change Emojis', callback_data="change_default_emojis")],
-            [InlineKeyboardButton('Remove Default Emojis', callback_data="remove_default_emojis")],
-            [InlineKeyboardButton('<-- Go Back', callback_data="back")],
+            [InlineKeyboardButton('Emojileri Değiştir', callback_data="change_default_emojis")],
+            [InlineKeyboardButton('Varsayılan Emojileri Kaldır', callback_data="remove_default_emojis")],
+            [InlineKeyboardButton('<-- Geri ', callback_data="back")],
         ])
-        text = f'Current Default Emojis are `{data}` \n\nUse below buttons to change or remove them'
+        text = f'Geçerli Varsayılan Emojiler `{data}` \n\nBunları değiştirmek veya kaldırmak için aşağıdaki düğmeleri kullanın'
     else:
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton('Add Emojis', callback_data="change_default_emojis")],
-            [InlineKeyboardButton('<-- Go Back', callback_data="back")],
+            [InlineKeyboardButton('Emoji Ekle', callback_data="change_default_emojis")],
+            [InlineKeyboardButton('<-- Geri', callback_data="back")],
         ])
-        text = 'Currently no Emojis are set. Use below button to add them.'
+        text = 'Şu anda hiçbir Emoji ayarlanmamış. Bunları eklemek için aşağıdaki düğmeyi kullanın.'
     return text, markup
